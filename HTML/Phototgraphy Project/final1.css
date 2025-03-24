@@ -1,0 +1,100 @@
+/* CSS File: styles.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url('1.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+    color: rgb(255, 255, 255);
+}
+header {
+    background: rgba(150, 5, 148, 0.514);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 20px;
+    font-size: 35px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+nav {
+    display: flex;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.301);
+    padding: 15px;
+}
+nav a {
+    color: rgb(255, 255, 255);
+    margin: 0 20px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+nav a:hover {
+    color: #8e0b8e;
+}
+.container {
+    text-align: center;
+    padding: 50px;
+}
+.gallery {
+    color: #9806b5;
+    display: flex;
+    flex-wrap: initial;
+    justify-content: center;
+    gap: 20px;
+}
+.gallery img {
+    width: 280px;
+    height: 200px;
+    border-radius: 10px;
+    transition: transform 0.5s, box-shadow 0.5s;
+}
+.gallery img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgb(166, 8, 145);
+}
+.services, .testimonials {
+    background: rgba(0, 0, 0, 0.39);
+    padding: 40px;
+    border-radius: 15px;
+    margin: 20px;
+}
+.testimonials p {
+    font-style: italic;
+    font-size: 18px;
+}
+.contact {
+    text-align: center;
+    padding: 30px;
+    color:white;
+    font-style: italic;
+}
+.contact input, .contact textarea {
+    width: 60%;
+    padding: 12px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.contact button {
+    padding: 12px 25px;
+    background: #9806b5;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+.contact button:hover {
+    background: #000000;
+}
+footer {
+    text-align: center;
+    color: white;
+}

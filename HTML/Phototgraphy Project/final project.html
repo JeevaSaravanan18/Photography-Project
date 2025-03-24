@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('1.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Raleway', sans-serif;
+            color: rgb(255, 255, 255);
+            font: bold;
+        }
+        header {
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            text-align: center;
+            padding: 25px;
+            font-size: 36px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: rgba(28, 2, 40, 0);
+            padding: 15px;
+            backdrop-filter: blur(5px);
+        }
+        nav a {
+            color: white;
+            margin: 0 20px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #841fcd;
+        }
+        .container {
+            text-align: center;
+            padding: 50px;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            padding: 20px;
+        }
+        .gallery img {
+            width: 280px;
+            height: 200px;
+            border-radius: 10px;
+            transition: transform 0.5s, box-shadow 0.5s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(216, 20, 203, 0.8);
+        }
+        .services, .quotes {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 40px;
+            border-radius: 15px;
+            margin: 20px;
+            box-shadow: 0 4px 10px rgba(210, 13, 213, 0.5);
+        }
+        .contact {
+            text-align: center;
+            padding: 30px;
+            color: white;
+        }
+        .contact input, .contact textarea {
+            width: 80%;
+            padding: 12px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .contact button {
+            padding: 12px 25px;
+            background: #680aa7;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .contact button:hover {
+            background: #000000;
+         }
+         footer {
+            text-align: center;
+            color: white;
+         }
+    </style>
+</head>
+<body>
+    <header>Welcome to Jeeva Photography</header>
+    <nav>
+        <a href="#gallery">Gallery</a>
+        <a href="#services">Services</a>
+        <a href="#quotes">Inspiring Quotes</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="container" id="gallery">
+        <h2>My Photography Gallery</h2>
+        <div class="gallery">
+            <img src="IMG_20220831_204456.jpg" alt="Photo 1">
+            <img src="IMG_20220831_204521 (1).jpg" alt="Photo 2">
+            <img src="PicsArt_11-30-05.06.58.jpg" alt="Photo 3">
+            <img src="PicsArt_11-30-09.00.28.jpg" alt="Photo 4">
+        </div>
+    </div>
+    <div class="container services" id="services">
+        <h2>My Services</h2>
+        <p>Wedding Photography | Nature Photography | Portraits | Commercial Shoots | Event Photography</p>
+    </div>
+    <div class="container quotes" id="quotes">
+        <h2>Inspiring Quotes</h2>
+        <p>"Photography is the story I fail to put into words."</p>
+        <p>"Every picture tells a story. Every photographer is a storyteller."</p>
+        <p>"A camera is a save button for the mind’s eye."</p>
+        <p>"Take only pictures, leave only footprints."</p>
+    </div>
+    <div class="contact" id="contact">
+        <h2>Contact Me</h2>
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Your Email">
+        <textarea placeholder="Your Message"></textarea>
+        <br>
+        <button>Send Message</button>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Jeeva Photography. All rights reserved.</p>
+    </footer>
+</body>
+</html>

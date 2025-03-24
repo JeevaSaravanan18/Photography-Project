@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share Location</title>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script>
+        (function(){
+            emailjs.init("your_emailjs_user_id"); // Replace with your EmailJS User ID
+        })();
+
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition, showError);
+            } else {
+                alert("Geolocation is not supported by this browser.");
+            }
+        }
+
+        function showPosition(position) {
+            document.getElementById("latitude").value = position.coords.latitude;
+            document.getElementById("longitude").value = position.coords.longitude;
+        }
+
+        function showError(error) {
+            alert("Geolocation failed: " + error.message);
+        }
+
+        function sendLocation() {
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const latitude = document.getElementById("latitude").value;
+            const longitude = document.getElementById("longitude").value;
+
+            if (!name || !email) {
+                alert("Please enter your name and email.");
+                return;
+            }
+
+            if (!latitude || !longitude) {
+                alert("Location not available. Please allow location access.");
+                return;
+            }
+
+            const templateParams = {
+                sender_name: name,
+                sender_email: email,
+                latitude: latitude,
+                longitude: longitude,
+                recipient_email: "your_email@example.com" // Replace with your email
+            };
+
+            emailjs.send("your_service_id", "your_template_id", templateParams)
+                .then(response => {
+                    alert("Location shared successfully!");
+                }, error => {
+                    alert("Failed to send location: " + error);
+                });
+        }
+    </script>
+</head>
+<body onload="getLocation()">
+    <h2>Share Your Location</h2>
+    <input type="text" id="name" placeholder="Enter your name" required><br>
+    <input type="email" id="email" placeholder="Enter your email" required><br>
+    <input type="text" id="latitude" placeholder="Latitude" readonly><br>
+    <input type="text" id="longitude" placeholder="Longitude" readonly><br>
+    <button onclick="sendLocation()">Share Location</button>
+</body>
+</html>

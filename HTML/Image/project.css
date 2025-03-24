@@ -1,0 +1,16 @@
+h1{
+    color: yellow;
+     display: inline-block;
+}
+input{
+    width: 60%;
+    padding: 20px;
+    
+}
+.searchbar{
+    padding: 15px;
+    display: inline;
+    
+    
+    
+}

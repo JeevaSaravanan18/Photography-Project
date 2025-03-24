@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('1.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+        header {
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 32px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .container {
+             color: white;
+            text-align: center;
+            padding: 50px;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+        .gallery img {
+            width: 300px;
+            height: 200px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+        .contact {
+            text-align: center;
+            padding: 30px;
+        }
+        .contact input, .contact textarea {
+            width: 80%;
+            padding: 10px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        .button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px; /* Adjust spacing as needed */
+}
+        .contact button {
+            padding: 10px 20px;
+            background: #ff6600;
+            border: none;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .contact button:hover {
+            background: #cc5500;
+            display: flex;
+           justify-content: center;
+           margin-top: 10px; /* Adjust spacing as needed */
+        }
+    </style>
+</head>
+<body>
+    <header>Welcome to Jeeva Photography</header>
+    <Header>"Capturing Moments, Creating Memories."</Header>
+    <nav>
+        <a href="#gallery">Gallery</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="container" id="gallery">
+        <h2>My Photography Gallery</h2>
+        <div class="gallery">
+            <img src="IMG_20220831_204456.jpg" alt="Photo 1">
+            <img src="IMG_20220831_204521 (1).jpg" alt="Photo 2">
+            <img src="PicsArt_11-30-05.06.58.jpg" alt="Photo 3">
+            <img src="PicsArt_11-30-09.00.28.jpg" alt="Photo 4">
+        </div>
+    </div>
+    <div class="container" id="services">
+        <h2>My Services</h2>
+        <p>Wedding Photography | Nature Photography | Portraits | Commercial Shoots</p>
+    </div>
+    <style>
+        button {
+            display: block;
+            margin-top: 10px;
+            
+        }
+    </style>
+    <div class="contact" id="contact">
+        <h2>Contact Me</h2>
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Your Email">
+        <textarea placeholder="Your Message"></textarea>
+        <button>Send Message</button>
+    </div>
+</body>
+</html>
